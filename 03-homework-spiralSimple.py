@@ -8,7 +8,7 @@ pts = []
 
 def drawLine(p0, steps):
     for t in range(steps):
-        x = (t**3) * math.cos(t * (math.pi / 6))
+        x = -(t**3) * math.cos(t * (math.pi / 6))
         y = (t**3) * math.sin(t * (math.pi / 6))
         Pt = (x, y, 0)
         pts.append(Pt)
