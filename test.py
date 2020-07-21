@@ -1,3 +1,6 @@
-import rhinoscriptsyntax as rs
+(1, 2, 3, 4) = a
 
-print ('hello world!')
+b = a
+
+
+print(b)
