@@ -48,4 +48,4 @@ def drawTree(startPt, vecDir, (minTwigCount, maxTwigCount, maxGenerations, maxTw
             drawTree(ptGrow, vecGrow, newProps, g+1)
 
 
-drawTree((0, 0, 0), (0, 0, 1), (5, 7, 6, 8, 0.7, 3, 6), 0)
+drawTree((0, 0, 0), (0, 0, 1), (3, 5, 6, 10, 1, 5, 1.3), 0)
