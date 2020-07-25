@@ -31,6 +31,8 @@ def drawBranch(origin, dir, minDistance, maxDistance, maxAngle):
 
 
 def drawTree(startPt, vecDir, (minTwigCount, maxTwigCount, maxGenerations, maxTwigLength, lengthMutation, maxTwigAngle, angleMutation), g):
+    rs.EnableRedraw(False)
+
     if g > maxGenerations:
         return
     newProps = minTwigCount, maxTwigCount, maxGenerations, maxTwigLength, lengthMutation, maxTwigAngle, angleMutation
@@ -46,6 +48,8 @@ def drawTree(startPt, vecDir, (minTwigCount, maxTwigCount, maxGenerations, maxTw
         if newTwig:
             vecGrow = rs.CurveTangent(newTwig, rs.CurveDomain(newTwig)[1])
             drawTree(ptGrow, vecGrow, newProps, g+1)
+            
+    rs.EnableRedraw(True)
 
 
-drawTree((0, 0, 0), (0, 0, 1), (5, 7, 6, 8, 0.7, 3, 6), 0)
+drawTree((0, 0, 0), (0, 0, 1), (3, 5, 6, 10, 1, 5, 1.3), 0)
